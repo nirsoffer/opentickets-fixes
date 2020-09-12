@@ -183,7 +183,7 @@ class QSOT_General_Admission_Area_Type extends QSOT_Base_Event_Area_Type {
 		$cart = WC()->cart;
 		// if there is a cart, then try to update the cart url
 		if ( is_object( $cart ) )
-			$args['cart_url'] = $cart->get_cart_url();
+			$args['cart_url'] = wc_get_cart_url();
 
 		// figure out the true max, based on available info
 		$zoner = $this->get_zoner();
